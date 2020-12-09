@@ -28,10 +28,11 @@ AddSubClass("cleric", "vengeance domain", {
 			minlevel : 1,
 			description : desc([
 				"Also at level 1, you can psychically rebuke attackers.",
-                "When a creature within 5 feet of you that you can see hits you with an attack",
-                "you can use your reaction to force the creature to make an Int saving throw.",
+                		"When a creature within 5 feet of you that you can see hits you with an attack",
+                		"you can use your reaction to force the creature to make an Int saving throw.",
 				"On failed 2d8 dmg, on succes half dmg",
-				"You can use this effect once, twice from level 6, thrice from level 12." 
+				"You can use this effect once, twice from level 6, thrice from level 12.",
+				"You regain all expended uses when you finish a short rest."
 			]),
 			usages : [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3],
 			recovery : "short rest",
