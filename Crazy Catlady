@@ -1,0 +1,89 @@
+//Krazy Katlady
+BackgroundList["krazy katlady"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
+	regExpSearch : /^(?=.*krazy)(?=.*katlady).*$/i, //required; regular expression of what to look for (i.e. now it looks for any entry that has the consecutive words "where", "i", "am", and "from" in it, disregarding capitalization or words in between). If this looks too complicated, just write: /where i am from/i
+
+	name : "Krazy Katlady", //required; the name as used
+
+	source : ["HB", 1], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
+
+	skills : ["Animal Handling","Intimidation"], //optional; skill proficiencies gained from having the background. If the background doesn't give fixed proficiencies, but instead gives a choice, delete this line and use the line below, "skillstxt"
+
+	gold : 9, //required; the amount of gold pieces added to the Equipment section on the second page when selecting "Background's items and gold" from the "Add Equipment" menu.
+
+	equipleft : [ //optional; syntax is: ["description", "amount", "weight"]. Put "" if it is nothing, don't put 0
+		["Ball of yarn", "1", ""],
+		["", "", ""],
+		["", "", ""],
+		["", "", ""],
+	], //items as they are added to the left column of the Equipment section on the second page when selecting "Background's items and gold" from the "Add Equipment" menu.
+
+	feature : "Katwhisperer", //required; the name of the background feature as it will appear on the sheet. The feature is then retrieved from the BackgroundFeatureList, see below
+
+	trait : [
+		"I’ve mastered the art of doing things one-handed while holding a cat on my lap, and I see no reason others shouldn’t be able to do the same.",
+		"I have a talent for spotting subtle dangers and opportunities, a skill honed by years of avoiding Wilbur’s sudden pounces and mischief.",
+		"My patience is boundless, having been tested by Wilbur’s constant interruptions and inconvenient naps on my open books.",
+		"I instinctively consider Wilbur’s preferences and moods before making decisions, often forgetting that others might not care about a cat’s opinion.",
+		"I believe that true companionship doesn’t require constant affection—just quiet understanding and shared moments of peace.
+    "I am an expert at interpreting feline behavior, especially when it comes to Wilbur, and often apply this knowledge to understand people, too.",
+    "I treat minor inconveniences caused by others with the same resigned acceptance I show Wilbur’s antics—life’s just easier that way.",
+    "I find it easier to express my emotions while in the comforting presence of Wilbur, and I sometimes wish people were as straightforward as cats.",
+	], //required; A list of the personality traits that can be chosen using the "Add Features" button on the second page. This list can be any length.
+
+	ideal : [
+		["Order",
+        "Order: A harmonious home and clear boundaries lead to a contented life. Even cats thrive with structure. (Lawful)"
+    ],
+    ["Freedom",
+        "Freedom: A cat’s life is its own. Rules and restrictions are meant to be toyed with, not followed. (Chaotic)"
+    ],
+    ["Companionship",
+        "Companionship: The bonds we share—no matter how small or furry—make life meaningful. (Good)"
+    ],
+    ["Balance",
+        "Balance: Life, like a cat’s movements, must remain poised. Neither extreme should take hold. (Neutral)"
+    ],
+    ["Domination",
+        "Domination: Like a cat toying with its prey, one must establish superiority over others to survive. (Evil)"
+    ],
+    ["Curiosity",
+        "Curiosity: The world, like a cat’s endless pursuits, is full of mysteries to explore. (Any)"
+		],
+	], //required; A list of the  ideals that can be chosen using the "Add Features" button on the second page. This list can be any length. Take note of the two-step build for every ideal, this is essential!
+
+	bond : [
+		"Wilbur is my constant companion, and I would go to great lengths to ensure his safety.",
+    "I hold onto the worn blanket we shared during hard times; it reminds me of the bond between us.",
+    "I will one day write a book about the countless antics Wilbur has gotten into and dedicate it to him.",
+    "An old enemy once threatened Wilbur, and I will never forgive them for it.",
+    "I see Wilbur as more than just a companion—he is a reflection of myself, and losing him would mean losing part of my soul.",
+    "The first cat I ever cared for taught me patience and kindness. I honor its memory by extending those lessons to others."
+	], //required; A list of the bonds that can be chosen using the "Add Features" button on the second page. This list can be any length.
+
+	flaw : [
+    "I let Wilbur's interruptions distract me from important tasks, often to my detriment.",
+    "I struggle to prioritize others when Wilbur is demanding my attention.",
+    "I assume everyone should love Wilbur as much as I do, and I take offense if they don’t.",
+    "I am overly cautious in new environments, constantly worrying about Wilbur’s safety.",
+    "I tend to underestimate the seriousness of situations, assuming they’re no worse than Wilbur’s usual antics.",
+    "I stubbornly refuse to admit that Wilbur might occasionally be in the wrong."
+	],  //required; A list of the bonds that can be chosen using the "Add Features" button on the second page. This list can be any length.
+
+	extra : [
+		"The lonely katlady",
+		"Katter chatter",
+	], //optional; the extra options the background gives on the first page of the sheet (in line Background at the top there are two drop-down menus). The first entry in this array is what is used for the mouseover text. If your background offers no extra features, simply delete this entry. Make sure that text you enter here fits into the field, or it won't look as good
+
+/* SYNTAX CHANGE v12.998 >> old syntax for 'tools' and 'languages' are no longer supported!! */
+	toolProfs : [["", ""], ["", ""]], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
+
+	languageProfs : ["Meowmeow"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
+
+	lifestyle : "modest", //optional; sets the lifestyle of the sheet. Options are: "wretched", "squalid", "poor", "modest", "comfortable", "wealthy", or "aristocratic"
+};
+
+BackgroundFeatureList["katwhisper"] = {  //Note the use of only lower case!
+	description : "You share a profound and unique bond with your feline companion, Wilbur, allowing you to understand and empathize with the quirks of cats like no other. This connection grants you an uncanny ability to interpret feline behavior, communicate with cat-like creatures, and navigate their mysterious ways. Whether calming a feral beast or enduring Wilbur's well-timed chaos, your feline intuition sets you apart in a world that often underestimates the wisdom of cats.", //required; the description of the feature as it will be put on the sheet. Make sure that this fits into the field or it won't look so pretty.
+
+	source : ["HB",1], //required; the source and the page number of the feature
+};
