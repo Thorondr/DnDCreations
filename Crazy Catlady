@@ -25,9 +25,9 @@ BackgroundList["krazy katlady"] = { //Object name; Note the use of only lower ca
 		"My patience is boundless, having been tested by Wilbur’s constant interruptions and inconvenient naps on my open books.",
 		"I instinctively consider Wilbur’s preferences and moods before making decisions, often forgetting that others might not care about a cat’s opinion.",
 		"I believe that true companionship doesn’t require constant affection—just quiet understanding and shared moments of peace.
-    "I am an expert at interpreting feline behavior, especially when it comes to Wilbur, and often apply this knowledge to understand people, too.",
-    "I treat minor inconveniences caused by others with the same resigned acceptance I show Wilbur’s antics—life’s just easier that way.",
-    "I find it easier to express my emotions while in the comforting presence of Wilbur, and I sometimes wish people were as straightforward as cats.",
+    		"I am an expert at interpreting feline behaviour, especially when it comes to Wilbur, and often apply this knowledge to understand people, too.",
+    		"I treat minor inconveniences caused by others with the same resigned acceptance I show Wilbur’s antics—life’s just easier that way.",
+		"I find it easier to express my emotions while in the comforting presence of Wilbur, and I sometimes wish people were as straightforward as cats.",
 	], //required; A list of the personality traits that can be chosen using the "Add Features" button on the second page. This list can be any length.
 
 	ideal : [
