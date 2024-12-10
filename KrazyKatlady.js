@@ -1,7 +1,14 @@
-BackgroundList["krazy katlady"] = { 
-	regExpSearch: /^(?=.*krazy)(?=.*katlady).*$/i, 
+var iFileName = "KrazyKatlady.js";
+SourceList["DM:IB"] = {
+    name : "Thorondr's Magical Fantastics",
+    abbreviation : "HB:TMF",
+    date : "2024/12/10"
+};
+
+BackgroundList["krazy katlady"] = {
+	regExpSearch : /^(?=.*krazy)(?=.*katlady).*$/i
 	name: "Krazy Katlady", 
-	source: ["HB", 1], 
+	source: "HB", 1, 
 	skills: ["Animal Handling", "Intimidation"], 
 	gold: 9, 
 	equipleft: [
